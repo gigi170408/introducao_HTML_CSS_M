@@ -9,29 +9,31 @@
     <meta name="description" content="Site com o propósito de explicar o HTML como ao todo">
     <title>Introdução ao HTML</title>
 
-    <link rel="shortcut icon" href="./zoey.jpg" type="image/x-icon"><!--TAG QUE INCORPORA LOGO E EXIBE NA GUIA DE ENDEREÇO-->>
+    <link rel="shortcut icon" href="../arquivos/rumi.jpg" type="image/x-icon">
+    <!--TAG QUE INCORPORA LOGO E EXIBE NA GUIA DE ENDEREÇO-->>
 
     <!--atributo rel indica a relação-->
     <!--atributo href a referência, ou seja, a localização-->>
-<link rel="stylesheet" href="./style.css"> <!--Linkando o css de forma externa-->
+    <link rel="stylesheet" href="../estilizacoes/style.css"> <!--Linkando o css de forma externa-->
 
-<!--linkando de forma interna ou incorporado-->
-<style></style>
+    <!--linkando de forma interna ou incorporado-->
+    <style></style>
 </head>
 
 <body>
 
     <!--linkando inline ou direto na tag-->
-    <h1>Tela principal sobre Guerreiras do K-pop</h1> <!--H1 é o titulo principal, por boas práticas chamamos somente 1 vez-->
-    
-    
+    <h1>Tela principal sobre Guerreiras do K-pop</h1>
+    <!--H1 é o titulo principal, por boas práticas chamamos somente 1 vez-->
+
+
     <header id="cabecalho">
-        <img id="logo" src="./rumi.jpg" alt="Imagem da rumi do filme guerreiras do kpop">
+        <img id="logo" src="../arquivos/rumi.jpg" alt="Imagem da rumi do filme guerreiras do kpop">
 
         <nav>
             <a href="https://youtu.be/d1tH-3dhQYE?si=1o0mtIjxgqOiCyHq">Musica Nao tem Perdao </a>
-            <a hre  f="index.html"> Inicial </a>
-            <a href="teste.pdf " download>Saiba mais</a>
+            <a hre f="index.html"> Inicial </a>
+            <a href="../arquivos/zoey.jpg " download>Saiba mais</a>
 
         </nav>
 
@@ -43,40 +45,60 @@
         <section>
             <h2>Personagens de Guerreiras do Kpop</h2>
 
+            <div id="container-flex-produtos">
 
-            <!-- card personagens-->>
-            <div> <!--tamanho a div-->
-                <img src="./zoey.jpg" alt="Zoey">
-                <h3>Zoey</h3>
-                <span>Amiga da Rumi e da Mira</span>
+                <!-- card personagens-->>
+                <article class="card-produto"> <!--tamanho a div-->
+                    <img src="../arquivos/zoey.jpg" alt="Zoey">
+                    <h3>Zoey</h3>
+                    <span>Rapper amiga de Rumi e da Mira</span>
+
+                </article>
+                <!-- card personagens-->>
+                <article class="card-produto"> <!--tamanho a div-->
+                    <img src="../arquivos/rumi foto.webp" alt="Rumi">
+                    <h3>Rumi</h3>
+                    <span>Cantora principal amiga de Zoey e Mira</span>
+
+                </article>
+                <!-- card personagens-->>
+                <article class="card-produto"> <!--tamanho a div-->
+                    <img src="../arquivos/mira.webp" alt="Mira">
+                    <h3>Mira</h3>
+                    <span>Coreografa amiga de Rumi e da Zoey</span>
+
+                </article>
 
             </div>
+
+
+
         </section>
 
-        <section>
+        <section id="container-flex-suporte"> 
             <h2>Suporte</h2>
             <!--tag form de formulário-->>
             <form>
                 <label for="campo-nomecompleto">Nome completo:</label>
-                <input type="text" placeholder="Digite seu nome completo" id="campo-nomecompleto" required>
+                <input class= "caixa-de-texto" ="text" placeholder="Digite seu nome completo" id="campo-nomecompleto" required>
 
-                <br /> <!--quebra a linha, mas só em casos muito extremos-->>
+                
 
                 <label for="campo-email">E-mail:</label>
-                <input type="email" name="" id="campo-email" required>
+                <input class= "caixa-de-texto" ="email" name="" id="campo-email" required>
 
-                <br /> <!--quebra a linha, mas só em casos muito extremos-->>
+              
 
                 <label for="campo-senha">Senha:</label>
-                <input type="password" name="" id="campo-senha" required>
+                <input class= "caixa-de-texto" ="password" name="" id="campo-senha" required>
 
 
-                <br /> <!--quebra a linha, mas só em casos muito extremos-->>
+                
 
                 <label for="campo-upload">Upload:</label>
-                <input type="file" name="" id="campo-upload" required>
+                <input class= "caixa-de-texto" ="file" name="" id="campo-upload" required>
 
-                <br />
+              
 
                 <label for="">Estado:</label>
                 <select name="" id="" required>
@@ -93,29 +115,29 @@
                     <option value="MS">MS</option>
                 </select>
 
-                <br />
+              
 
-                <input type="checkbox" name="" id="" required>
+                <input class= "caixa-de-texto" ="checkbox" name="" id="" required>
                 <label for="">Li e concordo com os termos.</label>
 
-                <br />
+              
 
                 <label for="">Sexo</label>
-                <br />
+              
 
                 <label for="">Feminino</label>
-                <input type="radio" name="opcao-genero" id="" value="Feminino" required>
+                <input class= "caixa-de-texto" ="radio" name="opcao-genero" id="" value="Feminino" required>
 
                 <label for="">Masculino</label>
-                <input type="radio" name="opcao-genero" id="" value="Masculino" required>
+                <input class= "caixa-de-texto" ="radio" name="opcao-genero" id="" value="Masculino" required>
 
-                <br />
+              
                 <!--Atributo required torna o campo obrigatório-->>
 
                 <label for="">Descrição</label>
                 <textarea name="" id="" required></textarea>
 
-                <br />
+              
 
                 <button type="submit">Enviar</button>
                 <button type="reset">Limpar</button>
@@ -127,7 +149,8 @@
 
     <aside>
         <nav>
-<a href="https://www.instagram.com/sony?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Sony Pictures</a>
+            <a href="https://www.instagram.com/sony?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">Sony
+                Pictures</a>
         </nav>
     </aside>
 
@@ -156,3 +179,4 @@
 </body>
 
 </html>
+ 
